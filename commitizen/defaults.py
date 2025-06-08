@@ -5,17 +5,12 @@ from collections import OrderedDict
 from collections.abc import Iterable, MutableMapping, Sequence
 from typing import Any, TypedDict
 
-# Type
-Questions = Iterable[MutableMapping[str, Any]]
-
-
 class CzSettings(TypedDict, total=False):
     bump_pattern: str
     bump_map: OrderedDict[str, str]
     bump_map_major_version_zero: OrderedDict[str, str]
     change_type_order: list[str]
 
-    questions: Questions
     example: str | None
     schema_pattern: str | None
     schema: str | None
